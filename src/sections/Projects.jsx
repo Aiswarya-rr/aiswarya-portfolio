@@ -156,7 +156,7 @@ export default function Projects() {
  
      <div className="bg-transparent">
      <motion.h2
-  className="text-4xl mt-10 text-center sm:text-5xl font-bold bg-clip-text text-transparent "
+  className="text-4xl mt-20 text-center sm:text-5xl font-bold bg-clip-text text-transparent "
   initial={{ opacity: 0, y: -30 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5 }}

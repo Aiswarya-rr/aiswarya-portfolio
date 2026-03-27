@@ -23,7 +23,6 @@ export default function Contact() {
     name: "",
     email: "",
     service: "",
-    budget: "",
     idea: "",
   });
 
@@ -32,8 +31,6 @@ export default function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    if (name === "budget" && value && !/^\d+$/.test(value)) return;
 
     setFormData((p) => ({ ...p, [name]: value }));
 
@@ -47,9 +44,6 @@ export default function Contact() {
     required.forEach(
       (f) => !formData[f].trim() && (newErrors[f] = "Fill this field")
     );
-
-    if (formData.service !== "other" && !formData.budget.trim())
-      newErrors.budget = "Fill this field";
 
     setErrors(newErrors);
     return !Object.keys(newErrors).length;
@@ -75,7 +69,7 @@ export default function Contact() {
       );
 
       setStatus("success");
-      setFormData({name: "",email: "",service: "",budget: "",idea: ""});
+      setFormData({name: "",email: "",service: "",idea: ""});
     } catch (err) {
       console.error("EmailJS Error:", err);
       setStatus("error");
@@ -198,30 +192,6 @@ export default function Contact() {
                 <p className="text-red-500 text-xs">{errors.service}</p>
               )}
             </div>
-
-            {/* Budget field */}
-            {formData.service && formData.service !== "other" && (
-              <div className="flex flex-col">
-                <label className="mb-1">
-                  Budget <span className="text-red-500">*</span>
-                </label>
-
-                <input
-                  type="text"
-                  name="budget"
-                  placeholder="Your Budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className={`p-3 rounded-md bg-white/10 border ${
-                    errors.budget ? "border-red-500" : "border-gray-500"
-                  } text-white focus:outline-none focus:border-blue-500`}
-                />
-
-                {errors.budget && (
-                  <p className="text-red-500 text-xs">{errors.budget}</p>
-                )}
-              </div>
-            )}
 
             {/* Idea textarea */}
             <div className="flex flex-col">
