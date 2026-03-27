@@ -32,9 +32,10 @@ export default function OverlayMenu({ isOpen, onClose }) {
               "Home",
               "About",
               "Skills",
+              "Skills Playground",
+              "Premium Certificates",
               "Projects",
               "Experience",
-              "Testimonials",
               "Contact",
             ].map((item, index) => (
               <motion.li
@@ -44,7 +45,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
                 transition={{ delay: 0.3 + index * 0.1 }}
               >
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={item === "Premium Certificates" ? "#premium-certificates" : item === "Skills Playground" ? "#skills-playground" : `#${item.toLowerCase().replace(" ", "-")}`}
                   onClick={onClose}
                   className="text-4xl text-white font-semibold hover:text-pink-400 transition-colors duration-300"
                 >

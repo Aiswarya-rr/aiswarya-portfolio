@@ -7,6 +7,9 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaGithub,
+  FaEnvelope,
+  FaPhone,
+  FaLocationDot,
 } from "react-icons/fa6";
 
 /**
@@ -16,11 +19,18 @@ import {
  * - Add/remove items if you want more or fewer social platforms
  */
 const socials = [
-  { Icon: FaYoutube, label: "YouTube", href: "https://www.youtube.com/@gauravbitss" },
-  { Icon: FaXTwitter, label: "X", href: "https://x.com/gauravbuilds" },
-  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/gaurav-gupta-4179671b0/" },
-  { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/gauravbits/" },
-  { Icon: FaGithub, label: "GitHub", href: "https://github.com/gauravgupta364" },
+  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/aiswarya-r-1b0b1b1b0/" },
+  { Icon: FaGithub, label: "GitHub", href: "https://github.com/aiswarya-rr" },
+];
+
+/**
+ * Contact details configuration
+ * - Update with your actual contact information
+ */
+const contactDetails = [
+  { Icon: FaEnvelope, label: "Email", value: "aish16012006@gmail.com", href: "mailto:aish16012006@gmail.com" },
+  { Icon: FaPhone, label: "Phone", value: "+91 9361002739", href: "tel:+919361002739" },
+  { Icon: FaLocationDot, label: "Location", value: "chennai, India", href: "#" },
 ];
 
 /**
@@ -72,13 +82,35 @@ const Footer = () => {
               textShadow: "0 2px 18px rgba(0,0,0,0.45)",
             }}
           >
-            Gaurav Gupta
+            Aiswarya R
           </h1>
         </div>
 
         {/* --- Accent underline --- */}
         {/* Decorative gradient line under name */}
         <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0D58CC] via-cyan-300 to-emerald-400" />
+
+        {/* --- Contact Details --- */}
+        <div className="w-full max-w-2xl">
+          <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {contactDetails.map(({ Icon, label, value, href }) => (
+              <motion.a
+                key={label}
+                href={href}
+                className="flex items-center gap-3 p-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-colors group"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Icon className="text-cyan-400 text-xl group-hover:text-cyan-300 transition-colors" />
+                <div className="text-left">
+                  <p className="text-xs text-gray-400 uppercase tracking-wider">{label}</p>
+                  <p className="text-sm text-gray-200 group-hover:text-white transition-colors">{value}</p>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
 
         {/* --- Social Media Links --- */}
         {/* Icons mapped dynamically from `socials` array */}
@@ -115,7 +147,7 @@ const Footer = () => {
         {/* --- Copyright / Trademark --- */}
         {/* Auto-updates year dynamically */}
         <p className="text-xs text-gray-400">
-          © {new Date().getFullYear()} Gaurav Gupta. All rights reserved.
+          © {new Date().getFullYear()} Aiswarya R. All rights reserved.
         </p>
       </motion.div>
     </footer>

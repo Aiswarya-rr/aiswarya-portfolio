@@ -6,28 +6,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // Array of experience objects containing job details
 const experiences = [
   {
-    role: "Web Developer",
-    company: "Brain Mentors",
-    duration: "2022",
-    description:
-      "Worked with team to build high-performance apps, integrated AI features, and improved engagement by 10%.",
-  },
-  
-  {
-    role: "Web Developer Intern",
-    company: "Mobisoft Technologies",
-    duration: "2022 - 2023",
+    role: "Fullstack Web Developer Intern",
+    company: "Webzenith Solutions",
+    duration: "2025 - present",
     description:
       "In this internship , I gained valuable hands on experience and exposure to various aspects of web development.",
   },
-{
-    role: "Graduate Engineer",
-    company: "HCL Technologies",
-    duration: "2024 - 2025",
-    description:
-      "Built the frontend of a GenAI-powered PV Intake Application using Next.js and TypeScript for a U.S life sciences client, enabling automated patient report processing across global regions.",
-  },
-
 
 ];
 
@@ -133,8 +117,15 @@ const Experience = () => {
       <div ref={sceneRef} style={{ height: `${SCENE_HEIGHT_VH}vh`, minHeight: "120vh" }} className="relative">
         <div className="sticky top-0 h-screen flex flex-col">
           {/* Section Title */}
-          <div className="shrink-0 px-6 pt-8">
-            <h2 className="text-4xl sm:text-5xl font-semibold mt-5 text-center">Experience</h2>
+          <div className="shrink-0 px-6 pt-4 text-center">
+             <motion.h2
+  className="text-4xl text-center sm:text-5xl font-bold bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] bg-clip-text text-transparent inline-block"
+  initial={{ opacity: 0, y: -30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+>
+  Experience
+</motion.h2>
           </div>
           {/* Timeline container */}
           <div className="flex-1 flex items-center justify-center px-6 pb-10">

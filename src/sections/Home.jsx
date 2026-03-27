@@ -1,17 +1,14 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import avatar from "../assets/avator.png";
+import avatar from "../assets/p.jpeg";
 import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 import { FaYoutube, FaInstagram } from "react-icons/fa6";
 import ParticleBackground from "../components/ParticlesBackground";
 
 const socials = [
-  { Icon: FaYoutube, label: "YouTube", href: "https://www.youtube.com/@gauravbitss" },
-  { Icon: FaXTwitter, label: "X", href: "https://x.com/gauravbuilds" },
-  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/gaurav-gupta-4179671b0/" },
-  { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/gauravbits/" },
-  { Icon: FaGithub, label: "GitHub", href: "https://github.com/gauravgupta364" },
+  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/aiswarya-r-8356172a4/" },
+  { Icon: FaGithub, label: "GitHub", href: "https://github.com/aiswarya-rr" },
 ];
 
 
@@ -33,7 +30,7 @@ const glowVariants = {
 
 const Home = React.forwardRef((props, ref) => {
   const roles = useMemo(
-    () => ["Software Developer", "Web Developer", "Content Creator"],
+    () => ["Software Developer", "Web Developer", ],
     []
   );
   const [index, setIndex] = useState(0);
@@ -124,7 +121,7 @@ const Home = React.forwardRef((props, ref) => {
               Hello, I&apos;m
               <br />
               <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
-                Gaurav Gupta
+                Aiswarya
               </span>
             </motion.h1>
 
@@ -135,9 +132,7 @@ const Home = React.forwardRef((props, ref) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              I turn complex ideas into seamless, high-impact web experiences —
-              building modern, scalable, and lightning-fast applications that
-              make a difference.
+             I build modern and responsive web applications, turning ideas into clean and user-friendly experiences.
             </motion.p>
 
             {/* buttons */}
@@ -214,9 +209,9 @@ const Home = React.forwardRef((props, ref) => {
           />
           <motion.img
             src={avatar}
-            alt="Gaurav Gupta avatar"
-            className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none"
-            style={{ right: "-30px", width: "min(45vw, 780px)", maxHeight: "90vh" }}
+            alt="avatar"
+            className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none rounded-xl"
+            style={{ right: "30px", width: "min(15vw, 400px)", maxHeight: "90vh" }}
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1, duration: 1 }}

@@ -115,8 +115,16 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="w-full md:w-1/2 bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10"
         >
-          <h2 className="text-3xl font-bold mb-6">Let’s Work Together</h2>
-
+           <div className="shrink-0 px-6 pt-4 text-center">
+                       <motion.h2
+            className="text-4xl text-center sm:text-5xl font-bold bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] bg-clip-text text-transparent inline-block"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Lets Connect
+          </motion.h2>
+                    </div>
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Name field */}
             <div className="flex flex-col">
@@ -263,8 +271,7 @@ export default function Contact() {
               disabled={status === "sending"}
               type="submit"
               className="
-                bg-blue-600 
-                hover:bg-blue-700 
+                bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63]
                 disabled:opacity-60 
                 text-white 
                 py-3 

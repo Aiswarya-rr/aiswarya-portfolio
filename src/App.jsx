@@ -5,12 +5,15 @@ import CustomCursor from "./components/CustomCursor";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
+import SkillsPlayground from "./sections/SkillsPlayground";
+import PremiumCertificates from "./sections/PremiumCertificates";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
-import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
+import { motion } from "framer-motion";
 import Footer from "./sections/Footer";
 import MusicPlayer from "./components/MusicPlayer";
+import SectionTitle from "./components/SectionTitle";
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -29,9 +32,14 @@ export default function App() {
 
       <About />
       <Skills />
+      
+      <PremiumCertificates />
+      
+      <SectionTitle title="My Projects" />
       <Projects />
       <Experience />
-      <Testimonials />
+    <SkillsPlayground />
+      
       <Contact />
       <Footer />
     </div>

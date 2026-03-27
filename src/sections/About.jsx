@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import p from "../assets/p.jpg";
+import p from "../assets/p.jpeg";
 
 export default function About() {
   return (
@@ -43,7 +43,7 @@ export default function About() {
           {/* Name + Role + Bio + CTAs */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#1CD8D2] via-[#00bf8f] to-[#302b63]">
-              Gaurav Gupta
+             Aiswarya
             </h2>
             <p className="mt-2 text-lg sm:text-xl text-white/90 font-semibold">
               Full Stack Developer
@@ -56,9 +56,9 @@ export default function About() {
             {/* Quick stats */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
               {[
-                { label: "Experience", value: "5+ years" },
-                { label: "Specialty", value: "Full Stack" },
-                { label: "Focus", value: "Performance & UX" },
+                 { label: "Role", value: "Full Stack Developer" },
+                  { label: "Focus", value: "Backend & APIs" },
+                  { label: "Learning", value: "Cloud & DevOps" }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -108,11 +108,11 @@ export default function About() {
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               About Me
             </h3>
-            <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-             I’m a Software Developer, Content Creator, and Web Developer — passionate about building fast, resilient applications and sharing coding insights on Instagram and YouTube.
-            </p>
-            <p className="mt-4 text-gray-400 text-base sm:text-lg">
-              I love turning ideas into scalable, user‑friendly products that make an impact. 
+            <p className="text-gray-300 leading-relaxed text-xl ">
+              I am Aiswarya, a passionate Full Stack Developer specializing in Next.js and TypeScript. I have strong problem-solving skills, demonstrated by earning a Silver Badge on CodeChef and solving over 100 problems on GeeksforGeeks.
+              <p className="mt-4 text-gray-300 text-xl">
+                I enjoy building scalable web applications using technologies like React, Supabase, and MongoDB, and continuously improving my skills through real-world projects and coding practice.
+              </p>
             </p>
           </motion.div>
         </div>
